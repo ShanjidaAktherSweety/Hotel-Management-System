@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Management System - Restaurant Menu</title>
+  <link rel="stylesheet" href="public-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-wrapper">
+      <div class="brand">
+        <div class="brand-logo">HM</div>
+        <div>
+          <h2>HotelSys</h2>
+          <p>Luxury Stay & Resort</p>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="rooms-public.html">Rooms</a>
+        
+        <a href="index.html#activities">Activities</a>
+        <a href="restaurant-public.html" class="active">Restaurant</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="public-booking.html" class="book-btn">Book Now</a>
+        <a href="staff-login.php" class="staff-btn">Staff Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="restaurant-public-hero">
+    <div class="container">
+      <div class="section-head center-head">
+        <span>Hotel Restaurant</span>
+        <h2>Discover Our Premium Dining Menu</h2>
+        <p>
+          Enjoy delicious meals, desserts, and refreshing drinks prepared for dine-in
+          and room service guests.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="menu-category-head">
+        <h3>Our Menu</h3>
+      </div>
+      <div class="restaurant-public-grid" id="publicRestaurantMenuGrid"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>HotelSys</h3>
+        <p>Luxury hospitality, premium rooms, and memorable guest experiences.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rooms-public.html">Rooms</a></li>
+          <li><a href="restaurant-public.html">Restaurant</a></li>
+          <li><a href="public-booking.html">Book Now</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Dining</h4>
+        <ul>
+          <li>Main Dishes</li>
+          <li>Salads</li>
+          <li>Desserts</li>
+          <li>Drinks</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Staff Access</h4>
+        <ul>
+          <li><a href="staff-login.html">Employee Login</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 HotelSys. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+async function loadPublicMenuItems() {
+  try {
+    const response = await fetch("backend/api/get_menu_items.php");
+    const result = await response.json();
+
+    const menuGrid = document.getElementById("publicRestaurantMenuGrid");
+    if (!menuGrid) return;
+
+    menuGrid.innerHTML = "";
+
+    if (result.success && result.data.length > 0) {
+      result.data.forEach((item) => {
+        const image = item.image_path ? item.image_path : "default-food.jpg";
+
+        menuGrid.innerHTML += `
+          <div class="restaurant-public-card">
+            <img src="${image}" alt="${item.item_name}">
+            <div class="restaurant-public-body">
+              <div class="restaurant-public-top">
+                <h4>${item.item_name}</h4>
+                <span>$${parseFloat(item.price).toFixed(2)}</span>
+              </div>
+              <p>${item.description}</p>
+              <a href="public-booking.html" class="public-primary-btn">Order / Request</a>
+            </div>
+          </div>
+        `;
+      });
+    } else {
+      menuGrid.innerHTML = "<p>No menu items available right now.</p>";
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+loadPublicMenuItems();
+</script>
+
+</body>
+</html>

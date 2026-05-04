@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Management System - Public Booking</title>
+  <link rel="stylesheet" href="public-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-wrapper">
+      <div class="brand">
+        <div class="brand-logo">HM</div>
+        <div>
+          <h2>HotelSys</h2>
+          <p>Luxury Stay & Resort</p>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="rooms-public.html">Rooms</a>
+        <a href="restaurant-public.html">Restaurant</a>
+        <a href="public-booking.html" class="active">Book Now</a>
+        <a href="staff-login.php" class="staff-btn">Staff Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="booking-hero">
+    <div class="container">
+      <div class="section-head center-head">
+        <span>Online Reservation</span>
+        <h2>Book Your Stay with Ease</h2>
+        <p>
+          Reserve your room and optionally request activities or restaurant services
+          for a complete hotel experience.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container public-booking-layout">
+      
+      <div class="public-booking-form-card">
+        <h3>Guest Booking Form</h3>
+
+        <form class="public-booking-form" id="publicBookingForm" autocomplete="off">
+          <div class="public-form-grid">
+            <div class="form-group">
+              <label for="guestFullName">Full Name <span class="required">*</span></label>
+              <input type="text" id="guestFullName" name="guestFullName" placeholder="Enter your full name" required autocomplete="off">
+            </div>
+
+            <div class="form-group">
+              <label for="guestEmail">Email Address <span class="required">*</span></label>
+              <input type="email" id="guestEmail" name="guestEmail" placeholder="Enter your email" required autocomplete="off">
+            </div>
+
+            <div class="form-group">
+              <label for="guestPhone">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="guestPhone" name="guestPhone" placeholder="Enter your phone number" required autocomplete="off">
+            </div>
+
+            
+
+            <div class="form-group">
+              <label for="roomType">Room Type <span class="required">*</span></label>
+              <select id="roomType" name="roomType" required>
+                <option value="">Select room type</option>
+                <option>Standard Room</option>
+                <option>Deluxe Room</option>
+                <option>Luxury Suite</option>
+                <option>Family Room</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="roomCount">Number of Rooms <span class="required">*</span></label>
+              <input type="number" id="roomCount" name="roomCount" min="1" value="1" required>
+            </div>
+
+            <div class="form-group">
+              <label for="checkIn">Check-In Date <span class="required">*</span></label>
+              <input type="date" id="checkIn" name="checkIn" required>
+            </div>
+
+            <div class="form-group">
+              <label for="checkOut">Check-Out Date <span class="required">*</span></label>
+              <input type="date" id="checkOut" name="checkOut" required>
+            </div>
+
+            <div class="form-group">
+              <label for="guests">Total Guests <span class="required">*</span></label>
+              <input type="number" id="guests" name="guests" min="1" value="1" required>
+            </div>
+
+            <div class="form-group">
+              <label for="bedPreference">Bed Preference <span class="required">*</span></label>
+              <select id="bedPreference" name="bedPreference">
+                <option value="">Select preference</option>
+                <option>Single Bed</option>
+                <option>Double Bed</option>
+                <option>King Bed</option>
+                <option>Twin Bed</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Optional Activity Request -->
+          <div class="optional-service-card">
+            <div class="optional-service-head">
+              <h4> Activity Request <span class="optional-text">(Optional)</span></h4>
+              
+            </div>
+
+            <div class="public-form-grid">
+              <div class="form-group">
+                <label for="activitiesSelect">Preferred Activity</label>
+                <select id="activitiesSelect" name="activitiesSelect">
+                  <option value="">No activity selected</option>
+                  <option>Zipline</option>
+                  <option>Swimming Pool</option>
+                  <option>Zipline + Swimming Pool</option>
+                  <option>Kayaking</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="activityDate">Preferred Activity Date</label>
+                <input type="date" id="activityDate" name="activityDate">
+              </div>
+
+              <div class="form-group">
+                <label for="activityTime">Preferred Time Slot</label>
+                <select id="activityTime" name="activityTime">
+                  <option value="">Select time slot</option>
+                  <option>09:00 AM</option>
+                  <option>10:00 AM</option>
+                  <option>11:00 AM</option>
+                  <option>02:00 PM</option>
+                  <option>04:00 PM</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="activityGuests">Guests for Activity</label>
+                <input type="number" id="activityGuests" name="activityGuests" min="1" placeholder="Optional">
+              </div>
+            </div>
+          </div>
+
+          <!-- Optional Restaurant Request -->
+          <div class="optional-service-card">
+            <div class="optional-service-head">
+              <h4> Restaurant Request <span class="optional-text">(Optional)</span></h4>
+              
+            </div>
+
+            <div class="public-form-grid">
+              <div class="form-group">
+                <label for="restaurantService">Restaurant Service</label>
+                <select id="restaurantService" name="restaurantService">
+                  <option value="">No restaurant request</option>
+                  <option>Breakfast</option>
+                  <option>Lunch</option>
+                  <option>Dinner</option>
+                  <option>Room Service</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="restaurantDate">Preferred Dining Date</label>
+                <input type="date" id="restaurantDate" name="restaurantDate">
+              </div>
+
+              <div class="form-group">
+                <label for="restaurantTime">Preferred Time</label>
+                <select id="restaurantTime" name="restaurantTime">
+                  <option value="">Select preferred time</option>
+                  <option>08:00 AM</option>
+                  <option>09:00 AM</option>
+                  <option>01:00 PM</option>
+                  <option>03:00 PM</option>
+                  <option>07:00 PM</option>
+                  <option>09:00 PM</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="restaurantGuests">Guests for Dining</label>
+                <input type="number" id="restaurantGuests" name="restaurantGuests" min="1" placeholder="Optional">
+              </div>
+            </div>
+          </div>
+
+          <div class="public-form-grid">
+            <div class="form-group full-width">
+              <label for="specialRequest">Special Request</label>
+              <textarea id="specialRequest" name="specialRequest" rows="4" placeholder="Add any room, activity, dining, or general request"></textarea>
+            </div>
+          </div>
+
+          <div class="booking-consent-row">
+            <label><input type="checkbox" required> I confirm the provided booking details are correct.<span class="required">*</span></label>
+          </div>
+
+          <button type="submit" class="primary-btn public-submit-btn">Submit Booking Request</button>
+        </form>
+      </div>
+
+      <div class="public-booking-side">
+        <div class="booking-side-card booking-summary-card">
+    <h3>Booking Summary</h3>
+
+    <div class="summary-row">
+      <span>Room Type</span>
+      <strong id="summaryRoomType">Not selected</strong>
+    </div>
+
+    <div class="summary-row">
+      <span>Price / Night</span>
+      <strong id="summaryPrice">$0</strong>
+    </div>
+
+    <div class="summary-row">
+      <span>Rooms</span>
+      <strong id="summaryRooms">1</strong>
+    </div>
+
+    <div class="summary-row">
+      <span>Total Nights</span>
+      <strong id="summaryNights">0</strong>
+    </div>
+
+    <div class="summary-row">
+      <span>Room Subtotal</span>
+      <strong id="summarySubtotal">$0</strong>
+    </div>
+
+    <div class="summary-row">
+      <span>Activity Request</span>
+      <strong id="summaryActivity">Not selected</strong>
+    </div>
+
+    <div class="summary-row">
+      <span>Restaurant Request</span>
+      <strong id="summaryRestaurant">Not selected</strong>
+    </div>
+
+    <div class="summary-row total-summary-row">
+      <span>Estimated Total</span>
+      <strong id="summaryTotal">$0</strong>
+    </div>
+
+    <p class="summary-note">
+      Optional activity and restaurant requests will be confirmed separately by hotel staff.
+    </p>
+  </div>
+
+  <div class="booking-side-card">
+    <h3>Booking Support</h3>
+    <p>Email: info@hotelsys.com</p>
+    <p>Phone: +1 234 567 890</p>
+    <p>Available 24/7 for reservation support.</p>
+  </div>
+
+  <div class="booking-side-card">
+    <h3>Important Note</h3>
+    <p>
+      Activity and restaurant requests are optional. After submitting your booking,
+      our team will confirm room availability and any additional service requests.
+    </p>
+  </div>
+</div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <p>© 2026 HotelSys. All rights reserved.</p>
+    </div>
+  </footer>
+
+<script>
+  const publicBookingForm = document.getElementById("publicBookingForm");
+
+  const roomType = document.getElementById("roomType");
+  const roomCount = document.getElementById("roomCount");
+  const checkIn = document.getElementById("checkIn");
+  const checkOut = document.getElementById("checkOut");
+  const activitiesSelect = document.getElementById("activitiesSelect");
+  const restaurantService = document.getElementById("restaurantService");
+
+  const summaryRoomType = document.getElementById("summaryRoomType");
+  const summaryPrice = document.getElementById("summaryPrice");
+  const summaryRooms = document.getElementById("summaryRooms");
+  const summaryNights = document.getElementById("summaryNights");
+  const summarySubtotal = document.getElementById("summarySubtotal");
+  const summaryActivity = document.getElementById("summaryActivity");
+  const summaryRestaurant = document.getElementById("summaryRestaurant");
+  const summaryTotal = document.getElementById("summaryTotal");
+
+  const roomPrices = {
+    "Standard Room": 80,
+    "Deluxe Room": 120,
+    "Luxury Suite": 250,
+    "Family Room": 180
+  };
+
+  function calculateNights(startDate, endDate) {
+    if (!startDate || !endDate) return 0;
+
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+
+    const diffTime = end - start;
+    const diffDays = diffTime / (1000 * 60 * 60 * 24);
+
+    return diffDays > 0 ? diffDays : 0;
+  }
+
+  function updateBookingSummary() {
+    const selectedRoom = roomType.value;
+    const selectedRooms = parseInt(roomCount.value) || 1;
+    const nights = calculateNights(checkIn.value, checkOut.value);
+    const price = roomPrices[selectedRoom] || 0;
+    const subtotal = price * selectedRooms * nights;
+
+    summaryRoomType.textContent = selectedRoom || "Not selected";
+    summaryPrice.textContent = `$${price}`;
+    summaryRooms.textContent = selectedRooms;
+    summaryNights.textContent = nights;
+    summarySubtotal.textContent = `$${subtotal}`;
+    summaryActivity.textContent = activitiesSelect.value || "Not selected";
+    summaryRestaurant.textContent = restaurantService.value || "Not selected";
+    summaryTotal.textContent = `$${subtotal}`;
+  }
+
+  function resetBookingSummary() {
+    summaryRoomType.textContent = "Not selected";
+    summaryPrice.textContent = "$0";
+    summaryRooms.textContent = "1";
+    summaryNights.textContent = "0";
+    summarySubtotal.textContent = "$0";
+    summaryActivity.textContent = "Not selected";
+    summaryRestaurant.textContent = "Not selected";
+    summaryTotal.textContent = "$0";
+  }
+
+  [roomType, roomCount, checkIn, checkOut, activitiesSelect, restaurantService].forEach(field => {
+    if (field) {
+      field.addEventListener("input", updateBookingSummary);
+      field.addEventListener("change", updateBookingSummary);
+    }
+  });
+
+  updateBookingSummary();
+
+  if (publicBookingForm) {
+  publicBookingForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(publicBookingForm);
+
+    try {
+      const response = await fetch("backend/api/public_booking_create.php", {
+        method: "POST",
+        body: formData
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert(result.message);
+        publicBookingForm.reset();
+        resetBookingSummary();
+      } else {
+        alert(result.message);
+      }
+    } catch (error) {
+      alert("Could not submit booking right now.");
+      console.error(error);
+    }
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Management System - Rooms</title>
+  <link rel="stylesheet" href="public-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-wrapper">
+      <div class="brand">
+        <div class="brand-logo">HM</div>
+        <div>
+          <h2>HotelSys</h2>
+          <p>Luxury Stay & Resort</p>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="rooms-public.html" class="active">Rooms</a>
+        <a href="index.html#activities">Activities</a>
+        <a href="restaurant-public.html">Restaurant</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="public-booking.html" class="book-btn">Book Now</a>
+        <a href="staff-login.php" class="staff-btn">Staff Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="public-room-hero">
+    <div class="container">
+      <div class="section-head center-head">
+        <span>Our Accommodation</span>
+        <h2>Choose the Perfect Room for Your Stay</h2>
+        <p>
+          Explore our comfortable and premium room options with the same facilities,
+          pricing, and quality you see in our hotel management system.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Room Cards -->
+  <section class="section">
+    <div class="container">
+
+      <div class="public-rooms-grid">
+
+        <!-- Deluxe Room -->
+        <div class="public-room-pro-card">
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80" alt="Deluxe Room">
+          <div class="public-room-card-body">
+            <div class="public-room-top">
+              <div>
+                <h3>Deluxe Room</h3>
+                <p>Room No: 101</p>
+              </div>
+              <span class="public-status available-status">Available</span>
+            </div>
+
+            <p class="public-room-price">$120 <span>/ night</span></p>
+
+            <div class="public-room-features">
+              <span><i class="fa-solid fa-wifi"></i> Free WiFi</span>
+              <span><i class="fa-regular fa-snowflake"></i> AC</span>
+              <span><i class="fa-solid fa-tv"></i> Smart TV</span>
+              <span><i class="fa-solid fa-bath"></i> Attached Bath</span>
+            </div>
+
+            <div class="public-room-actions">
+              <a href="public-booking.html" class="public-primary-btn">Reserve Now</a>
+              <a href="#" class="public-secondary-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Luxury Suite -->
+        <div class="public-room-pro-card">
+          <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80" alt="Luxury Suite">
+          <div class="public-room-card-body">
+            <div class="public-room-top">
+              <div>
+                <h3>Luxury Suite</h3>
+                <p>Room No: 205</p>
+              </div>
+              <span class="public-status occupied-status">Premium</span>
+            </div>
+
+            <p class="public-room-price">$250 <span>/ night</span></p>
+
+            <div class="public-room-features">
+              <span><i class="fa-solid fa-wifi"></i> Free WiFi</span>
+              <span><i class="fa-solid fa-bed"></i> King Bed</span>
+              <span><i class="fa-solid fa-mug-hot"></i> Mini Bar</span>
+              <span><i class="fa-solid fa-water-ladder"></i> Balcony View</span>
+            </div>
+
+            <div class="public-room-actions">
+              <a href="public-booking.html" class="public-primary-btn">Reserve Now</a>
+              <a href="#" class="public-secondary-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Standard Room -->
+        <div class="public-room-pro-card">
+          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80" alt="Standard Room">
+          <div class="public-room-card-body">
+            <div class="public-room-top">
+              <div>
+                <h3>Standard Room</h3>
+                <p>Room No: 118</p>
+              </div>
+              <span class="public-status reserved-status-public">Popular</span>
+            </div>
+
+            <p class="public-room-price">$80 <span>/ night</span></p>
+
+            <div class="public-room-features">
+              <span><i class="fa-solid fa-wifi"></i> Free WiFi</span>
+              <span><i class="fa-solid fa-fan"></i> Fan</span>
+              <span><i class="fa-solid fa-tv"></i> TV</span>
+              <span><i class="fa-solid fa-shower"></i> Shower</span>
+            </div>
+
+            <div class="public-room-actions">
+              <a href="public-booking.html" class="public-primary-btn">Reserve Now</a>
+              <a href="#" class="public-secondary-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Family Room -->
+        <div class="public-room-pro-card">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80" alt="Family Room">
+          <div class="public-room-card-body">
+            <div class="public-room-top">
+              <div>
+                <h3>Family Room</h3>
+                <p>Room No: 302</p>
+              </div>
+              <span class="public-status family-status">Family Choice</span>
+            </div>
+
+            <p class="public-room-price">$180 <span>/ night</span></p>
+
+            <div class="public-room-features">
+              <span><i class="fa-solid fa-wifi"></i> Free WiFi</span>
+              <span><i class="fa-solid fa-couch"></i> Lounge Area</span>
+              <span><i class="fa-solid fa-children"></i> Family Space</span>
+              <span><i class="fa-solid fa-bath"></i> Large Bath</span>
+            </div>
+
+            <div class="public-room-actions">
+              <a href="public-booking.html" class="public-primary-btn">Reserve Now</a>
+              <a href="#" class="public-secondary-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="section-head center-head" style="margin-top: 40px;">
+        <span>Available Rooms</span>
+        <h2>New Room Options</h2>
+      </div>
+      <div class="room-grid" id="publicRoomsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>HotelSys</h3>
+        <p>Luxury hospitality, premium rooms, and memorable guest experiences.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rooms-public.html">Rooms</a></li>
+          <li><a href="public-booking.html">Book Now</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li>Room Booking</li>
+          <li>Restaurant</li>
+          <li>Swimming Pool</li>
+          <li>Zipline Adventure</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Staff Access</h4>
+        <ul>
+          <li><a href="staff-login.html">Employee Login</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 HotelSys. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+async function loadPublicRooms() {
+  try {
+    const response = await fetch("backend/api/get_rooms.php");
+    const result = await response.json();
+
+    const grid = document.getElementById("publicRoomsGrid");
+    if (!grid) return;
+
+    grid.innerHTML = "";
+
+    if (result.success && result.data.length > 0) {
+      result.data.forEach((room) => {
+        if (room.availability_status !== "Available" || room.cleaning_status !== "Clean") return;
+
+        const image = room.image_path ? room.image_path : "default-room.jpg";
+
+        grid.innerHTML += `
+          <div class="room-card">
+            <img src="${image}" alt="${room.room_type}">
+            <div class="room-card-body">
+              <h3>${room.room_type}</h3>
+              <p>${room.description || "Comfortable room with hotel facilities."}</p>
+
+              <div class="room-meta">
+                <span><i class="fa-solid fa-user-group"></i> ${room.capacity} Guests</span>
+                <span><i class="fa-solid fa-layer-group"></i> Floor ${room.floor_number || "N/A"}</span>
+              </div>
+
+              <div class="room-bottom">
+                <strong>$${parseFloat(room.price_per_night).toFixed(2)} / night</strong>
+                <a href="public-booking.html" class="card-btn">Book Now</a>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+    } else {
+      grid.innerHTML = "<p>No rooms available right now.</p>";
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+loadPublicRooms();
+</script>
+
+</body>
+</html>

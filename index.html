@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Management System - Home</title>
+  <link rel="stylesheet" href="public-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-wrapper">
+      <div class="brand">
+        <div class="brand-logo">HM</div>
+        <div>
+          <h2>HotelSys</h2>
+          <p>Luxury Stay & Resort</p>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="rooms-public.html">Rooms</a>
+        <a href="#activities">Activities</a>
+        <a href="restaurant-public.html">Restaurant</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="public-booking.html" class="book-btn">Book Now</a>
+        <a href="staff-login.php" class="staff-btn">Staff Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="hero-badge">Welcome to HotelSys</span>
+        <h1>Experience Comfort, Luxury, and Memorable Hospitality</h1>
+        <p>
+          Book premium rooms, enjoy exciting activities like zipline and swimming,
+          and relax with world-class hotel services in one place.
+        </p>
+        <div class="hero-actions">
+          <a href="public-booking.html" class="primary-btn">Book Your Stay</a>
+          <a href="rooms-public.html" class="secondary-btn">Explore Rooms</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80" alt="Hotel">
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Info -->
+  <section class="quick-info">
+    <div class="container info-grid">
+      <div class="info-card">
+        <i class="fa-solid fa-bed"></i>
+        <h3>Luxury Rooms</h3>
+        <p>Comfortable standard, deluxe, and suite rooms for every guest.</p>
+      </div>
+      <div class="info-card">
+        <i class="fa-solid fa-person-swimming"></i>
+        <h3>Activities</h3>
+        <p>Enjoy swimming pool sessions and adventure zipline experiences.</p>
+      </div>
+      <div class="info-card">
+        <i class="fa-solid fa-utensils"></i>
+        <h3>Restaurant</h3>
+        <p>Delicious dining experience with room service and restaurant options.</p>
+      </div>
+      <div class="info-card">
+        <i class="fa-solid fa-shield-heart"></i>
+        <h3>Guest Safety</h3>
+        <p>Safe, secure, and guest-friendly hospitality with quality service.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rooms -->
+  <section class="section" id="rooms">
+    <div class="container">
+      <div class="section-head">
+        <span>Our Rooms</span>
+        <h2>Choose the Perfect Room for Your Stay</h2>
+      </div>
+
+      <div class="room-grid">
+        <div class="room-card">
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80" alt="Standard Room">
+          <div class="room-card-body">
+            <h3>Standard Room</h3>
+            <p>Ideal for comfortable short stays with essential facilities.</p>
+            <div class="room-meta">
+              <span><i class="fa-solid fa-user-group"></i> 2 Guests</span>
+              <span><i class="fa-solid fa-wifi"></i> Free WiFi</span>
+            </div>
+            <div class="room-bottom">
+              <strong>$80 / night</strong>
+              <a href="rooms-public.html" class="card-btn">View Rooms</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80" alt="Deluxe Room">
+          <div class="room-card-body">
+            <h3>Deluxe Room</h3>
+            <p>Spacious room with premium comfort and elegant design.</p>
+            <div class="room-meta">
+              <span><i class="fa-solid fa-user-group"></i> 2 Guests</span>
+              <span><i class="fa-solid fa-tv"></i> Smart TV</span>
+            </div>
+            <div class="room-bottom">
+              <strong>$120 / night</strong>
+              <a href="rooms-public.html" class="card-btn">View Rooms</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80" alt="Luxury Suite">
+          <div class="room-card-body">
+            <h3>Luxury Suite</h3>
+            <p>Premium suite with larger space and luxury facilities.</p>
+            <div class="room-meta">
+              <span><i class="fa-solid fa-user-group"></i> 4 Guests</span>
+              <span><i class="fa-solid fa-mug-hot"></i> Mini Bar</span>
+            </div>
+            <div class="room-bottom">
+              <strong>$250 / night</strong>
+              <a href="rooms-public.html" class="card-btn">View Rooms</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activities -->
+  <section class="section light-section" id="activities">
+  <div class="container">
+    <div class="section-head">
+      <span>Guest Activities</span>
+      <h2>More Than Just a Hotel Stay</h2>
+      <p>Enjoy exciting adventure and relaxation experiences during your stay.</p>
+    </div>
+    
+    <div class="activity-grid-public-pro" id="publicActivityGrid"></div>
+  </div>
+  
+  
+</section>
+
+<section class="section" id="restaurant">
+  <div class="container">
+    <div class="restaurant-home-wrapper">
+      <div class="restaurant-home-image">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80" alt="Hotel Restaurant">
+      </div>
+
+      <div class="restaurant-home-content">
+        <span>Restaurant Experience</span>
+        <h2>Luxury Dining in a Warm and Elegant Atmosphere</h2>
+        <p>
+          Enjoy premium dining with carefully prepared dishes, refreshing drinks,
+          desserts, and room service options designed to make your stay more memorable.
+        </p>
+
+        <div class="restaurant-home-features">
+          <div class="restaurant-feature-item">
+            <i class="fa-solid fa-utensils"></i>
+            <span>Fine Dining Menu</span>
+          </div>
+          <div class="restaurant-feature-item">
+            <i class="fa-solid fa-bell-concierge"></i>
+            <span>Room Service Available</span>
+          </div>
+          <div class="restaurant-feature-item">
+            <i class="fa-solid fa-mug-hot"></i>
+            <span>Breakfast, Lunch & Dinner</span>
+          </div>
+          <div class="restaurant-feature-item">
+            <i class="fa-solid fa-cake-candles"></i>
+            <span>Desserts & Drinks</span>
+          </div>
+        </div>
+
+        <div class="restaurant-home-actions">
+          <a href="restaurant-public.html" class="primary-btn">View Full Menu</a>
+          <a href="public-booking.html" class="secondary-btn">Reserve Dining</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=80" alt="About Hotel">
+      </div>
+      <div class="about-content">
+        <span>About Us</span>
+        <h2>We Provide Exceptional Hospitality for Every Guest</h2>
+        <p>
+          Our hotel combines luxury rooms, restaurant services, exciting activities,
+          and excellent customer care to create a complete guest experience.
+        </p>
+        <ul>
+          <li>Comfortable and premium rooms</li>
+          <li>Secure and guest-friendly environment</li>
+          <li>Restaurant, room service, and activity access</li>
+          <li>Professional and supportive hotel staff</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section light-section" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span>Contact Us</span>
+        <h2>Need Help with Booking?</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <i class="fa-solid fa-location-dot"></i>
+          <h3>Address</h3>
+          <p>123 Luxury Avenue, City Center</p>
+        </div>
+        <div class="contact-card">
+          <i class="fa-solid fa-phone"></i>
+          <h3>Phone</h3>
+          <p>+1 234 567 890</p>
+        </div>
+        <div class="contact-card">
+          <i class="fa-solid fa-envelope"></i>
+          <h3>Email</h3>
+          <p>info@hotelsys.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>HotelSys</h3>
+        <p>Luxury hospitality, premium rooms, and memorable guest experiences.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#rooms">Rooms</a></li>
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="restaurant-public.html">Restaurant</a></li>
+          <li><a href="public-booking.html">Book Now</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li>Room Booking</li>
+          <li>Restaurant</li>
+          <li>Swimming Pool</li>
+          <li>Zipline Adventure</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Staff Access</h4>
+        <ul>
+          <li><a href="staff-login.php">Employee Login</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 HotelSys. All rights reserved.</p>
+    </div>
+  </footer>
+
+<script>
+async function loadPublicActivities() {
+  try {
+    const response = await fetch("backend/api/get_activity_items.php");
+    const result = await response.json();
+
+    const grid = document.getElementById("publicActivityGrid");
+    if (!grid) return;
+
+    grid.innerHTML = "";
+
+    if (result.success && result.data.length > 0) {
+      result.data.forEach((item) => {
+        const image = item.image_path ? item.image_path : "default-activity.jpg";
+
+        grid.innerHTML += `
+          <div class="activity-public-pro-card">
+            <div class="activity-public-image">
+              <img src="${image}" alt="${item.activity_name}">
+              <span class="public-activity-tag zipline-tag">${item.activity_type}</span>
+            </div>
+
+            <div class="activity-public-body-pro">
+              <div class="activity-public-top">
+                <h3>${item.activity_name}</h3>
+                <span class="public-activity-status">${item.activity_status}</span>
+              </div>
+
+              <p>${item.description}</p>
+
+              <div class="public-activity-meta">
+                <span><i class="fa-solid fa-sack-dollar"></i> $${parseFloat(item.price).toFixed(2)}</span>
+                <span><i class="fa-regular fa-clock"></i> ${item.time_slots || "Flexible"}</span>
+                <span><i class="fa-solid fa-user-check"></i> ${item.age_range || "All Ages"}</span>
+                <span><i class="fa-solid fa-weight-scale"></i> ${item.weight_limit || "N/A"}</span>
+              </div>
+
+              <div class="public-activity-actions">
+                <a href="public-booking.html" class="public-primary-btn">Book Activity</a>
+                <a href="public-booking.html" class="public-secondary-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+    } else {
+      grid.innerHTML = "<p>No new activities available right now.</p>";
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+loadPublicActivities();
+</script>
+
+</body>
+</html>
